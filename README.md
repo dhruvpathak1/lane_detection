@@ -83,7 +83,9 @@ Instead of the slope-intercept form of lines, we use the normal form to resolve 
  
 •	Angle and Distance parameters
 In this representation, a line is formed using two parameters - an angle θ and a distance p. p is the length of the normal from the origin (0, 0) onto the line. and θ is the angle this normal makes with the x axis. This is represented my sinusoidal waves in the Hough Space.
+
 ![alt txt](https://aishack.in/static/img/tut/hough_p0.jpg)
+
 Next, to detect lane lines, loop through every pixel of the edge detected image. If a pixel is zero, it is ignored. It's not an edge, so it can't be a line. So move on to the next pixel. If a pixel is non-zero, you generate its sinusoidal curve (in the Hough space). So for every non-zero pixel, you'll get a sinusoidal curve in the Hough space. And you'll end up with an image similar to the one at the top. 
 The Hough Space is then made into a 2D grid as shown above (known as the accumulator). Each bin will have a vote, every point of intersection increases the vote of that bin by 1. The bin with maximum votes is the line that best represents the points for which the Hough space is plotted. This is because a line plotted with these values will pass through maximum pixels of the edge in the image.
 Here cv2.HoughLinesP is used where 2nd and 3rd parameter give the bin size. 4th parameter is the minimum intersections in a bin needed to detect a line. 5th parameter is a placeholder, 6th,  indicates that a line should comprise of a minimum of 40 pixels and the last parameter will allow connecting two lines with a gap of less than or equal to 5 pixels.
