@@ -22,6 +22,7 @@ A matrix of n x n is taken (n is always odd), so that there is a single middle p
  
 Here cv2.GaussianBlur makes use of a 5x5 kernel to average the noise in the image.
 -	cv2.GaussianBlur(image, (kernel value), deviation)
+
 Applying Gaussian Blur for noise reduction and smoothening
 
 blur_image = cv2.GaussianBlur(image, (5, 5), 0)
@@ -32,6 +33,7 @@ Canny Edge Detection is used for detecting all the edges of an image. The Canny 
  
 Here cv2.Canny with a threshold ratio of 1:3 to detect the required edges of the grayscale image.
 -	cv2.Canny( image, lower threshold, higher threshold)
+
 Detecting edges in the image
 
 canny_image = cv2.Canny(blur_image, 50, 150)
@@ -90,6 +92,7 @@ Next, to detect lane lines, loop through every pixel of the edge detected image.
 The Hough Space is then made into a 2D grid as shown above (known as the accumulator). Each bin will have a vote, every point of intersection increases the vote of that bin by 1. The bin with maximum votes is the line that best represents the points for which the Hough space is plotted. This is because a line plotted with these values will pass through maximum pixels of the edge in the image.
 Here cv2.HoughLinesP is used where 2nd and 3rd parameter give the bin size. 4th parameter is the minimum intersections in a bin needed to detect a line. 5th parameter is a placeholder, 6th,  indicates that a line should comprise of a minimum of 40 pixels and the last parameter will allow connecting two lines with a gap of less than or equal to 5 pixels.
 -	cv2.HoughLinesP( image, distance resolution(pixels), angle resolution(radians), threshold, min. line length, max. line gap )
+
 Applying Hough Transform
 lines1 = cv2.HoughLinesP(cropped_img,2,np.pi/180, 100, np.array([]), minLineLength=40,maxLineGap=5)
 
@@ -127,13 +130,13 @@ def coordinates(image, line_para):
     x1 = int((y1 - intercept) / slope)
     x2 = int((y2 - intercept) / slope)
     return np.array([x1, y1, x2, y2])
-
  
 ## VIII.	Displaying the Final Image
 The final image is formed with the lane detected image above is added to the original image using ‘cv2.addWeighted’
 Here cv2.addWeighted adds two images with gamma a value to be added to the sum.
 -	cv2.addWeighted( image A, weight A, image B, weight B, gamma)
-( Here the black image has a different use. When this line is to be imprinted in the original image, the pixel values will be added, therefore having a black image will result in adding 0 to the original image. Resulting in no unwanted alteration in the original image)
+
+(Here the black image has a different use. When this line is to be imprinted in the original image, the pixel values will be added, therefore having a black image will result in adding 0 to the original image. Resulting in no unwanted alteration in the original image)
 combo_image = cv2.addWeighted(org_img, 0.8, line_img, 1, 1)
 
 ## IX.	Lane Detection in Videos
