@@ -151,6 +151,8 @@ while (vid.isOpened()):
 ## X.	Conclusion
 A general flow or steps of the Lane Detection Algorithm using Hough Transform is shown below.
 
+![alt txt](https://miro.medium.com/max/875/1*wVfCstrB_YLG_UZE3X5JLw.png)
+
 After completion of this algorithm and successfully obtaining the correct outputs in images and also correct detection of lanes in test videos, I would like to conclude by saying that Hough Transform Lane Detection Algorithm is a straightforward method of correctly detecting straight lines and small turns and curves. It has helped detection of lanes in a sure and fast procedure in current self-driving cars.. For detection of roundabouts and sharp curves in lanes or sharp turns, Spatial Convolutional Neutral Networks or SCNN has given effective outputs.
 
 
