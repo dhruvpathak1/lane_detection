@@ -12,6 +12,7 @@ A conversion to grayscale is needed as the original image comprises of 3 channel
 lane_img = cv2.imread("lane_pic.jpg", 0)
 
 Another way to convert to grayscale
+
 cv2.cvtColor(lane_img,cv2.COLOR_RGB2GRAY)
  
 ## II.	Reduction of noise
