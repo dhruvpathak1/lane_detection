@@ -52,8 +52,8 @@ cv2.fillPoly(mask, polygons, 255)
 A ‘bitwise_and’ operation is applied on the edge detected image and the masked region image. This leads to an image with edges only of the region of interest.
 (A black masked image has value 0 in the unrequired region. A bitwise AND operation always gives 0 if one input is 0, therefore eliminating the edges of the unrequired region)
 masked_img = cv2.bitwise_and(image, mask)
-cv2.imshow("Masked Image", masked_img)
 
+cv2.imshow("Masked Image", masked_img)
  
 ## V.	Detecting Straight Lines
 Hough transform plays a major role in detecting the straight lines of the lanes. The basic goal is to detect whether a cluster of pixels (of the edges) are part of a line or not.
@@ -63,16 +63,22 @@ If somehow one can loop through all pixels, and figure out the slope and interce
 
 •	From lines to points
 A lines is a collection of points. And managing a collection of points is tougher than managing a single point. Obviously. So the first thing we learn is how to represent a line as a single point, without losing any information about it. This is done through the m-c space also called the Hough Space.
+
 ![alt txt](https://aishack.in/static/img/tut/hough_mc_space.jpg)
+
 As shown in the above picture, every line has two quantities associated with it, the slope and the intercept. With these two numbers, you can describe a line completely.
 •	From points to lines
 We know that infinite lines pass through a point. So, for every line passing through (xa, ya), there would be a point in the mc space.
 So, a point in the xy space is equivalent to a line in the mc space.
+
  ![alt txt](https://aishack.in/static/img/tut/hough_mc_space_point1.jpg)
+ 
 The Hough transform is all about doing what we just learned: converting points in the xy space to lines in the mc space.
 You take an edge detected image, and for every point that is non-black, you draw lines in the mc place. Obviously, some lines will intersect. These intersections mark are the parameters of the line.
 The following picture will clarify the idea:
+
  ![alt txt](https://aishack.in/static/img/tut/hough_lines_example.jpg)
+ 
 Instead of the slope-intercept form of lines, we use the normal form to resolve the issue that the value of m (slope) tends to infinity for vertical lines.
  
 •	Angle and Distance parameters
