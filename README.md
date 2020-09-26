@@ -124,11 +124,16 @@ right_fit_avg = np.average(right_fit, axis=0)
 def coordinates(image, line_para):
     slope, intercept = line_para
     y1 = image.shape[0]
-    # Length of the line
+    Length of the line
+    
     y2 = int(y1 * (4 / 6))
-    # Obtaining values of x1 and x2 from y= mx + c
+    
+    Obtaining values of x1 and x2 from y= mx + c
+    
     x1 = int((y1 - intercept) / slope)
+    
     x2 = int((y2 - intercept) / slope)
+    
     return np.array([x1, y1, x2, y2])
  
 ## VIII.	Displaying the Final Image
