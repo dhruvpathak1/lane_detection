@@ -1,6 +1,6 @@
 # DAA Project
 # Hough Transform (Lane Detection) Algorithm
-# Vrushit Patel (E006) and Dhruv Pathak (E008)
+# Dhruv Pathak
 
 import cv2
 import numpy as np
