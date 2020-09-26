@@ -10,6 +10,7 @@ A conversion to grayscale is needed as the original image comprises of 3 channel
 (Grayscale) 0 in 2nd parameter makes it black and white
 
 lane_img = cv2.imread("lane_pic.jpg", 0)
+
 Another way to convert to grayscale
 cv2.cvtColor(lane_img,cv2.COLOR_RGB2GRAY)
  
@@ -21,8 +22,8 @@ Therefore, before we detect edges, any noise in the image is to be reduced to sm
 A matrix of n x n is taken (n is always odd), so that there is a single middle pixel (m). The Gaussian blur takes a kernel of n x n and runs through all whole image, to change the value of the pixel m, as the average of its neighbouring pixel values.
  
 Here cv2.GaussianBlur makes use of a 5x5 kernel to average the noise in the image.
--	cv2.GaussianBlur(image, (kernel value), deviation)
 
+-	cv2.GaussianBlur(image, (kernel value), deviation)
 Applying Gaussian Blur for noise reduction and smoothening
 
 blur_image = cv2.GaussianBlur(image, (5, 5), 0)
@@ -37,6 +38,7 @@ Here cv2.Canny with a threshold ratio of 1:3 to detect the required edges of the
 Detecting edges in the image
 
 canny_image = cv2.Canny(blur_image, 50, 150)
+
 cv2.imshow("Canny Image", canny_image)
  
 ## IV.	Region of Interest
