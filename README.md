@@ -19,17 +19,6 @@ We will study in detail, detecting lanes in images as any lane detection in vide
 
 ##### V.	Detecting Straight Lines
 
-![alt txt](https://aishack.in/static/img/tut/hough_mc_space.jpg)
-
-
-![alt txt](https://aishack.in/static/img/tut/hough_mc_space_point1.jpg)
- 
-
-![alt txt](https://aishack.in/static/img/tut/hough_lines_example.jpg)
- 
-
-![alt txt](https://aishack.in/static/img/tut/hough_p0.jpg)
-
 ##### VI.	Displaying the detected Lines
 
 ##### VII.	Averaging the Lines
