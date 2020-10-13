@@ -29,7 +29,7 @@ We will study in detail, detecting lanes in images as any lane detection in vide
     
 ##### X.	Conclusion
 
-![alt txt](https://miro.medium.com/max/875/1*wVfCstrB_YLG_UZE3X5JLw.png)
+![alt txt](1.png)
 
 
 Reference:
