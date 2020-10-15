@@ -31,6 +31,3 @@ We will study in detail, detecting lanes in images as any lane detection in vide
 
 ![alt txt](1.png)
 
-
-Reference:
-https://www.youtube.com/watch?v=eLTLtUVuuy4
