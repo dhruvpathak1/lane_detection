@@ -44,7 +44,8 @@ a) Lane Detection - Hough Transform
 
 b) Object Detection - You Look Only Once
 
-Please visit our Blog Website
+
+### Please visit our Blog Website
 
 https://btechblogs.herokuapp.com/blog/lanedetection
 
