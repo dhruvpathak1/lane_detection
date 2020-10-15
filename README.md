@@ -2,7 +2,8 @@
 In this study, we present a perception algorithm that is based purely on vision or camera data. We focus on demonstrating an end-to-end lane detection method using contemporary computer vision techniques for self-driving cars. We first present a basic approach based on edge detection and Hough transform which is the baseline approach for detecting only the straight lane lines.
 We will study in detail, detecting lanes in images as any lane detection in videos, is done on individual frames i.e. individual images.
 
-## Programming Language: Python
+## Programming Language: 
+Python
 
 ## Libraries: 
 1) OpenCV
