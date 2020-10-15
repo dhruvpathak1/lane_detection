@@ -5,9 +5,9 @@ We will study in detail, detecting lanes in images as any lane detection in vide
 ## Programming Language: Python
 
 ## Libraries: 
-OpenCV
-Numpy
-Pyplot from Matplot Lib
+1) OpenCV
+2) Numpy
+3) Pyplot from Matplot Lib
 
 ## Explanation with step-by-step outputs on [BTech Blogs/Lane Detection]
 
