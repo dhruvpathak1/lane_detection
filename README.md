@@ -3,7 +3,12 @@ In this study, we present a perception algorithm that is based purely on vision 
 We will study in detail, detecting lanes in images as any lane detection in videos, is done on individual frames i.e. individual images.
 
 ## Programming Language: Python
-## Libraries: OpenCV, Numpy, Pyplot from Matplot Lib
+
+## Libraries: 
+OpenCV
+Numpy
+Pyplot from Matplot Lib
+
 ## Explanation with step-by-step outputs on [BTech Blogs/Lane Detection]
 
 
