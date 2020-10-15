@@ -39,7 +39,9 @@ Python
 
 ### For More Information
 For some detailed explaination on each of the algorithm
+
 a) Lane Detection - Hough Transform
+
 b) Object Detection - You Look Only Once
 
 Please visit our Blog Website
