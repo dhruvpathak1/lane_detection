@@ -47,7 +47,7 @@ b) Object Detection - You Look Only Once
 
 ### Please visit our Blog Website
 
-https://btechblogs.herokuapp.com/blog/lanedetection
+https://dhruvpathak.netlify.app/blogs/detection1
 
-https://btechblogs.herokuapp.com/blog/objectdetection
+https://dhruvpathak.netlify.app/blogs/detection2
 
