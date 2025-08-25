@@ -21,5 +21,3 @@ The lane detection pipeline follows these sequential steps:
 6.  **Averaging the Lines**: Combines the detected line segments into two solid lines representing the left and right lanes.
 7.  **Displaying Final Image**: Overlays the detected lanes onto the original image for a clear visual representation.
 8.  **Video Processing**: Extends the algorithm to apply the same steps to each frame of a video stream to achieve real-time lane detection.
-
-![Diagram showing the output of the Hough Transform algorithm on an image of a road.](https://raw.githubusercontent.com/dhruvpathak1/Hough_Transform_Lane_Detection_Algorithm/main/1.png)
