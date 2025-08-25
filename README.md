@@ -1,53 +1,25 @@
-# Hough Transform (Lane Detection) Algorithm
-In this study, we present a perception algorithm that is based purely on vision or camera data. We focus on demonstrating an end-to-end lane detection method using contemporary computer vision techniques for self-driving cars. We first present a basic approach based on edge detection and Hough transform which is the baseline approach for detecting only the straight lane lines.
-We will study in detail, detecting lanes in images as any lane detection in videos, is done on individual frames i.e. individual images.
-
-## Programming Language: 
-Python
-
-## Libraries: 
-1) OpenCV
-2) Numpy
-3) Pyplot from Matplot Lib
-
-## Explanation with step-by-step outputs on [BTech Blogs/Lane Detection]
 
 
-### STEPS ARE:-
- 
-##### I.	Convert to Grayscale
+### **Project Description**
 
-##### II.	Reduction of noise
+This project presents a perception algorithm for lane detection in self-driving car systems, relying purely on vision-based data from a camera. It demonstrates a complete, end-to-end lane detection method using classic computer vision techniques. The core of the project is a foundational approach based on **edge detection** and the **Hough Transform** algorithm, which serves as a baseline for identifying straight lane lines in both images and video streams. The process is broken down into a series of logical steps, from initial image processing to final visualization of the detected lanes.
 
-##### III.	Edge Detection
+### **Technical Stack**
+* **Programming Language**: Python
+* **Libraries**:
+    * **OpenCV**: For core computer vision tasks, including image processing and video handling.
+    * **NumPy**: For numerical operations, particularly for manipulating image arrays.
+    * **Matplotlib**: Used for visualizing the processed images and results.
 
-##### IV.	Region of Interest
+### **Algorithm Steps**
+The lane detection pipeline follows these sequential steps:
+1.  **Convert to Grayscale**: Reduces the image to a single color channel to simplify processing.
+2.  **Noise Reduction**: Applies filters to remove noise and smooth the image.
+3.  **Edge Detection**: Uses an algorithm like Canny edge detection to identify sharp changes in image intensity.
+4.  **Region of Interest**: Masks the image to focus only on the relevant area where lanes are expected to be.
+5.  **Detecting Straight Lines**: Applies the **Hough Transform** to identify potential straight lines within the defined region.
+6.  **Averaging the Lines**: Combines the detected line segments into two solid lines representing the left and right lanes.
+7.  **Displaying Final Image**: Overlays the detected lanes onto the original image for a clear visual representation.
+8.  **Video Processing**: Extends the algorithm to apply the same steps to each frame of a video stream to achieve real-time lane detection.
 
-##### V.	Detecting Straight Lines
-
-##### VI.	Displaying the detected Lines
-
-##### VII.	Averaging the Lines
-
-##### VIII.	Displaying the Final Image
-
-##### IX.	Lane Detection in Videos
-    
-##### X.	Conclusion
-
-![alt txt](1.png)
-
-### For More Information
-For some detailed explaination on each of the algorithm
-
-a) Lane Detection - Hough Transform
-
-b) Object Detection - You Look Only Once
-
-
-### Please visit our Blog Website
-
-https://dhruvpathak.netlify.app/blogs/detection1
-
-https://dhruvpathak.netlify.app/blogs/detection2
-
+![Diagram showing the output of the Hough Transform algorithm on an image of a road.](https://raw.githubusercontent.com/dhruvpathak1/Hough_Transform_Lane_Detection_Algorithm/main/1.png)
